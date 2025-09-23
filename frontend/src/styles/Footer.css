@@ -1,0 +1,188 @@
+.footer {
+  background: #111;
+  color: #eee;
+  padding: 40px 20px;
+  font-family: sans-serif;
+}
+
+.cta-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.cta-box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.cta-apps {
+  display: flex;
+  gap: 10px;
+}
+
+.app-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.badge-sub {
+  font-size: 0.6rem;
+  opacity: 0.7;
+}
+
+.badge-main {
+  font-weight: bold;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-icon {
+  background: #0ea5e9;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.brand-desc {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin: 10px 0;
+}
+
+.contact-list {
+  margin-top: 10px;
+  font-size: 0.85rem;
+}
+
+.contact-list div,
+.contact-list a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #ccc;
+  text-decoration: none;
+}
+
+.contact-list a:hover {
+  color: white;
+}
+
+.trust-badges {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.trust-badges span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.link-col h3 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: #aaa;
+}
+
+.link-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.link-col a {
+  font-size: 0.85rem;
+  color: #ccc;
+  text-decoration: none;
+}
+
+.link-col a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icon {
+  display: flex;
+  padding: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.bottom-links {
+  display: flex;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.bottom-links a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.bottom-links a:hover {
+  color: white;
+}
+
+.copyright {
+  margin-top: 10px;
+  font-size: 0.75rem;
+  text-align: center;
+  color: #888;
+}

@@ -1,0 +1,81 @@
+.service-card {
+    flex: 1 1 220px;          /* flexible card, min 220px wide */
+    max-width: 280px;         /* won’t grow too large */
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.service-img img {
+    width: 100%;
+    height: auto;             /* adjust dynamically */
+    aspect-ratio: 4/3;        /* keeps consistent shape */
+    object-fit: cover;
+}
+
+.service-info {
+    padding: 12px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* header */
+.service-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.service-header h4 {
+    font-size: clamp(14px, 1.2vw, 18px); /* responsive font */
+    font-weight: bold;
+    margin: 0;
+}
+
+.user_id, .job {
+    font-size: clamp(12px, 1vw, 16px);
+    color: #555;
+    margin-top: 4px;
+}
+
+.price-section {
+    text-align: right;
+}
+
+.price-section .icon {
+    width: clamp(20px, 2vw, 32px);
+    height: auto;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.price {
+    font-size: clamp(13px, 1vw, 16px);
+    font-weight: bold;
+    color: black;
+}
+
+/* footer */
+.service-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: clamp(12px, 1vw, 15px);
+    color: #555;
+}
+
+.service-footer .time {
+    font-size: clamp(11px, 0.9vw, 14px);
+    color: #666;
+}

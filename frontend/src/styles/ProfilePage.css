@@ -1,0 +1,791 @@
+/* Profile Page Styles */
+.servora-profile {
+  --primary-color: #0ea5e9;
+  --primary-dark: #0284c7;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  
+  font-family: 'Inter', sans-serif;
+  color: var(--gray-800);
+  line-height: 1.5;
+}
+
+/* Hero section */
+.servora-hero {
+  position: relative;
+  background: linear-gradient(135deg, #0ea5e9, #0284c7);
+  color: white;
+  padding: 3rem 0 2rem;
+  margin-bottom: 2rem;
+}
+
+.servora-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 0;
+}
+
+.servora-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.servora-hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.servora-hero-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.servora-hero-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  min-width: 200px;
+}
+
+.servora-avatar-wrapper {
+  position: relative;
+}
+
+.servora-avatar-lg {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.servora-edit-avatar-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  color: var(--gray-800);
+}
+
+.servora-hero-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.servora-name-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.servora-name-row h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.servora-verify-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+}
+
+.servora-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.servora-rating-text {
+  font-size: 0.875rem;
+}
+
+.servora-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.servora-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+}
+
+/* Star Rating */
+.servora-star-row {
+  display: flex;
+  align-items: center;
+}
+
+.servora-star {
+  color: #f59e0b;
+  margin-right: 2px;
+}
+
+.servora-star.servora-empty {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* Buttons */
+.servora-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.servora-btn.servora-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.servora-btn.servora-primary:hover {
+  background-color: var(--primary-dark);
+}
+
+.servora-btn.servora-outline {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+.servora-btn.servora-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.servora-btn.servora-lg {
+  padding: 0.625rem 1.25rem;
+  font-size: 1rem;
+}
+
+.servora-btn.servora-wfull {
+  width: 100%;
+}
+
+.servora-application-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 0.375rem;
+}
+
+/* Stats */
+.servora-stat {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: var(--gray-50);
+  border-radius: 0.5rem;
+  border: 1px solid var(--gray-200);
+}
+
+.servora-stat-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  border: 1px solid var(--gray-200);
+  color: var(--primary-color);
+}
+
+.servora-stat-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.servora-stat-value {
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.servora-stat-label {
+  color: var(--gray-500);
+  font-size: 0.875rem;
+}
+
+.servora-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Main Content */
+.servora-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 1.5rem;
+}
+
+.servora-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.servora-card {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  border: 1px solid var(--gray-200);
+}
+
+.servora-card h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.servora-lead {
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+}
+
+.servora-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  border-top: 1px solid var(--gray-200);
+  padding-top: 1.5rem;
+}
+
+.servora-label {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--gray-500);
+  margin-bottom: 0.25rem;
+}
+
+.servora-value {
+  font-weight: 500;
+}
+
+/* Tabs */
+.servora-tabs {
+  display: flex;
+  gap: 0.25rem;
+  border-bottom: 1px solid var(--gray-200);
+  margin-bottom: 1rem;
+}
+
+.servora-tab {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.75rem 1rem;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--gray-600);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.servora-tab:hover {
+  color: var(--primary-color);
+  background: var(--gray-50);
+}
+
+.servora-tab.servora-active {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
+/* Sidebar */
+.servora-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.servora-side-card {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  border: 1px solid var(--gray-200);
+}
+
+.servora-side-card h4 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.servora-contact-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  color: var(--gray-700);
+}
+
+.servora-summary-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.servora-summary-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.servora-summary-item:last-child {
+  border-bottom: none;
+}
+
+.servora-summary-label {
+  color: var(--gray-600);
+}
+
+.servora-summary-value {
+  font-weight: 500;
+}
+
+/* Appointments */
+.servora-appointments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.servora-appointment-item {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.servora-appointment-item:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.servora-appointment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.servora-appointment-service h4 {
+  margin: 0 0 0.25rem 0;
+  color: var(--gray-900);
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.servora-service-category {
+  margin: 0;
+  color: var(--gray-500);
+  font-size: 0.875rem;
+}
+
+.servora-status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.servora-status-pending {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.servora-status-confirmed {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.servora-status-completed {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.servora-status-cancelled {
+  background: #fecaca;
+  color: #b91c1c;
+}
+
+.servora-appointment-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.servora-detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--gray-600);
+  font-size: 0.875rem;
+}
+
+.servora-detail-item svg {
+  color: var(--gray-400);
+  flex-shrink: 0;
+}
+
+.servora-price-label,
+.servora-payment-label {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.servora-payment-status {
+  font-weight: 500;
+}
+
+.servora-payment-pending {
+  color: var(--warning);
+}
+
+.servora-payment-completed {
+  color: var(--success);
+}
+
+.servora-payment-failed {
+  color: var(--danger);
+}
+
+.servora-appointment-description {
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: 0.5rem;
+}
+
+.servora-appointment-description p {
+  margin: 0;
+  color: var(--gray-600);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* Reviews */
+.servora-reviews-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.servora-score {
+  text-align: center;
+}
+
+.servora-big {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.servora-muted {
+  color: var(--gray-500);
+  font-size: 0.875rem;
+}
+
+.servora-reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.servora-review-item {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.servora-review-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.servora-review-top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.servora-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--gray-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.servora-review-name {
+  font-weight: 500;
+}
+
+.servora-review-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--gray-500);
+}
+
+.servora-review-text {
+  margin: 0;
+}
+
+/* Modal Styles */
+.servora-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.servora-modal {
+  background: white;
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 500px;
+  padding: 2rem;
+  position: relative;
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+}
+
+.servora-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--gray-500);
+}
+
+.servora-modal h3 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.servora-form-group {
+  margin-bottom: 1.25rem;
+}
+
+.servora-form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.servora-form-group input,
+.servora-form-group textarea {
+  width: 100%;
+  padding: 0.625rem;
+  border: 1px solid var(--gray-300);
+  border-radius: 0.375rem;
+  font-size: 1rem;
+}
+
+.servora-form-group input:focus,
+.servora-form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.1);
+}
+
+.servora-file-upload {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem;
+  border: 1px dashed var(--gray-300);
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+
+.servora-file-upload:hover {
+  background: var(--gray-50);
+}
+
+.servora-skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.servora-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: var(--gray-100);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.servora-tag button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--gray-500);
+  font-size: 1.125rem;
+  line-height: 0.5;
+  padding: 0;
+  margin-left: 0.25rem;
+}
+
+/* Empty states */
+.servora-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: var(--gray-500);
+  text-align: center;
+  gap: 1rem;
+}
+
+.servora-empty-state h4 {
+  margin: 0;
+  color: var(--gray-700);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.servora-empty-state p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Loading */
+.servora-loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  color: var(--gray-500);
+  gap: 1rem;
+}
+
+.servora-spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--gray-200);
+  border-top: 3px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .servora-main-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .servora-hero-content {
+    flex-direction: column;
+  }
+  
+  .servora-hero-left {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .servora-name-row,
+  .servora-rating-row,
+  .servora-meta-row {
+    justify-content: center;
+  }
+  
+  .servora-hero-right {
+    align-items: center;
+  }
+}

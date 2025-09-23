@@ -1,0 +1,80 @@
+.notifications-page {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.notif-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #333;
+  text-align: center;
+}
+
+.notif-loading,
+.notif-empty {
+  text-align: center;
+  color: #777;
+  font-size: 1rem;
+  padding: 1rem 0;
+}
+
+.notif-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.notif-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+  gap: 12px;
+  transition: background 0.2s ease;
+}
+
+.notif-item:hover {
+  background: #f9f9ff;
+}
+
+.notif-icon {
+  font-size: 1.3rem;
+  margin-top: 2px;
+}
+
+.notif-icon.booking {
+  color: #6e8efb;
+}
+
+.notif-icon.cancel {
+  color: #e53e3e;
+}
+
+.notif-icon.approval {
+  color: #38a169;
+}
+
+.notif-icon.default {
+  color: #718096;
+}
+
+.notif-content {
+  flex: 1;
+}
+
+.notif-message {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #2d3748;
+  margin: 0 0 4px 0;
+}
+
+.notif-time {
+  font-size: 0.8rem;
+  color: #718096;
+}

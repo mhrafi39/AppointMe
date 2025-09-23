@@ -1,0 +1,49 @@
+/* Service Management Dropdown Styles */
+.servora-service-dropdown-container {
+  position: relative !important;
+  z-index: 10000 !important;
+}
+
+.servora-service-dropdown {
+  position: absolute !important;
+  top: calc(100% + 8px) !important;
+  right: 0 !important;
+  background: white !important;
+  border-radius: 12px !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4) !important;
+  border: 2px solid #4338ca !important;
+  z-index: 999999 !important;
+  min-width: 240px !important;
+  overflow: visible !important;
+  display: block !important;
+  transform: translateZ(0) !important;
+  will-change: transform !important;
+  backdrop-filter: blur(5px) !important;
+}
+
+.servora-dropdown-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  width: 100% !important;
+  padding: 14px 18px !important;
+  border: none !important;
+  background: transparent !important;
+  text-align: left !important;
+  cursor: pointer !important;
+  transition: background-color 0.2s ease !important;
+  font-size: 15px !important;
+  color: #374151 !important;
+  font-weight: 500 !important;
+  font-family: inherit !important;
+}
+
+.servora-dropdown-item:hover {
+  background-color: #f7fafc !important;
+}
+
+.servora-dropdown-separator {
+  height: 1px !important;
+  background: #e2e8f0 !important;
+  margin: 4px 0 !important;
+}
