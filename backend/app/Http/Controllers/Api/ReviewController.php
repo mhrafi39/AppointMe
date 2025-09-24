@@ -34,10 +34,18 @@ class ReviewController extends Controller
 
             $provider_id = $service[0]->user_id;
 
-            // Check if user has already reviewed this service
+            // Check if user has already reviewed this service using nested query
             $existingReview = DB::select(
-                'SELECT review_id FROM reviews WHERE user_id = ? AND services_id = ? LIMIT 1',
-                [$user_id, $services_id]
+                'SELECT review_id FROM reviews 
+                 WHERE user_id = ? 
+                 AND services_id = ? 
+                 AND EXISTS (
+                     SELECT 1 FROM services s 
+                     WHERE s.services_id = reviews.services_id 
+                     AND s.user_id = ?
+                 ) 
+                 LIMIT 1',
+                [$user_id, $services_id, $provider_id]
             );
 
             if (!empty($existingReview)) {

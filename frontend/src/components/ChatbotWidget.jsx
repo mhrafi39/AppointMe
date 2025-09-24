@@ -62,10 +62,22 @@ function ChatbotWidget() {
         message: messageToSend,
       });
 
-      // Extract Gemini response text from nested structure
-      const botText =
-        res.data?.candidates?.[0]?.content?.parts?.[0]?.text ||
-        "I'm here to help! Could you please rephrase your question?";
+      // Handle different response formats
+      let botText;
+      
+      if (res.data?.success && res.data?.message) {
+        // New backend format with success flag
+        botText = res.data.message;
+      } else if (res.data?.candidates?.[0]?.content?.parts?.[0]?.text) {
+        // Original Gemini API format
+        botText = res.data.candidates[0].content.parts[0].text;
+      } else if (res.data?.message) {
+        // Simple message format
+        botText = res.data.message;
+      } else {
+        // Fallback
+        botText = "I'm here to help! Could you please rephrase your question?";
+      }
 
       const botMessage = { sender: "bot", text: botText };
 
@@ -74,6 +86,7 @@ function ChatbotWidget() {
         setIsTyping(false);
       }, 1200); // simulate typing delay
     } catch (err) {
+      console.error('Chatbot error:', err);
       setMessages((prev) => [
         ...prev,
         { sender: "bot", text: "⚠️ Sorry, I'm having trouble connecting. Please try again." },

@@ -53,17 +53,69 @@ class ServicePageController extends Controller
             'booking_time' => 'required|string',
         ]);
 
-        // Get the provider ID for this service
+        // NESTED QUERY: Check if user is trying to book their own service
+        $isOwnService = DB::select(
+            "SELECT s.services_id 
+             FROM services s 
+             WHERE s.services_id = ? 
+             AND EXISTS (
+                 SELECT 1 
+                 FROM users u 
+                 WHERE u.id = s.user_id 
+                 AND u.id = ?
+             )",
+            [$request->services_id, $request->user_id]
+        );
+
+        if (!empty($isOwnService)) {
+            return response()->json([
+                'success' => false,
+                'message' => 'You cannot book your own service'
+            ], 403);
+        }
+
+        // Get the provider ID for this service using nested query
         $service = DB::selectOne(
-            "SELECT user_id FROM services WHERE services_id = ?",
-            [$request->services_id]
+            "SELECT user_id 
+             FROM services 
+             WHERE services_id = ? 
+             AND NOT EXISTS (
+                 SELECT 1 
+                 FROM users u 
+                 WHERE u.id = services.user_id 
+                 AND u.id = ?
+             )",
+            [$request->services_id, $request->user_id]
         );
 
         if (!$service) {
             return response()->json([
                 'success' => false,
-                'message' => 'Service not found'
+                'message' => 'Service not found or you cannot book your own service'
             ], 404);
+        }
+
+        // NESTED QUERY: Check if user has already booked this service
+        $existingBooking = DB::select(
+            "SELECT b.booking_id 
+             FROM bookings b 
+             WHERE b.user_id = ? 
+             AND b.services_id = ? 
+             AND EXISTS (
+                 SELECT 1 
+                 FROM services s 
+                 WHERE s.services_id = b.services_id 
+                 AND s.user_id != b.user_id
+             ) 
+             AND b.status IN (0, 1)",
+            [$request->user_id, $request->services_id]
+        );
+
+        if (!empty($existingBooking)) {
+            return response()->json([
+                'success' => false,
+                'message' => 'You have already booked this service'
+            ], 409);
         }
 
         // Ensure all provider's services have availability records
